@@ -45,6 +45,16 @@ public class Main {
         System.out.println(bus4);
         printSeparator();
 
+        printSeparator("Second Task 1.2");
+        printSeparator("Third Task 1.3");
+
+        Competing car = new Car("BMW","X3",1.5);
+        Competing bus = (Competing) bus1;
+        Competing truck = (Competing) truck1;
+
+        bus.pitStop();
+        bus.bestCircleTime();
+        bus.maxSpeed();
 
     }
 }
