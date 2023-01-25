@@ -5,10 +5,15 @@ import java.util.List;
 
 public class Main {
     static public void printSeparator() {
-        System.out.println("=====================================================");
+        System.out.println("-----------------------------------------------------");
+    }
+
+    static public void printSeparator(String str) {
+        String separator = " ============================ ";
+        System.out.println(separator + str + separator);
     }
     public static void main(String[] args) {
-        printSeparator();
+        printSeparator("FIRST TASK 1.1"); ////////////////////////////////////// 1.1
         Transport car1 = new Car("BMW", "X5", 2.5);
         Transport car2 = new Car("BMW", "X7", 3);
         Transport car3 = new Car("LADA", "XRAY", 2);
