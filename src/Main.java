@@ -56,5 +56,19 @@ public class Main {
         bus.bestCircleTime();
         bus.maxSpeed();
 
+        printSeparator("Fourth Task 1.4");
+        Driver carDriver = new CarDriver("Petrov Vasilii Ivanovic", 10);
+        Driver busDriver = new BusDriver("Simonov Ivan Fedorovich", 1);
+        TruckDriver truckDvier = new TruckDriver("Sidorov Petor Petrovich", 7);
+
+        car1.changeDriver(carDriver);
+        car1.printMessage();
+
+        Transport bus5 = new Bus("JAC", "HK6118G", 4.0, (BusDriver) busDriver);
+        bus5.printMessage();
+
+        Transport truck5 = new Truck("MAN", "TGS", 5,truckDvier);
+        truck5.printMessage();
+
     }
 }

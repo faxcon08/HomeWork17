@@ -1,6 +1,6 @@
 package lesson_17;
 
-abstract public class Transport {
+abstract public class Transport<T extends Driver> {
 
     /////// fields ///////
     private final String brand;
@@ -55,6 +55,10 @@ abstract public class Transport {
     public double getEngineVolume() {
         return engineVolume;
     }
+
+    abstract public void changeDriver(T driver);
+
+    abstract public void printMessage();
 
 
 } // Transport
