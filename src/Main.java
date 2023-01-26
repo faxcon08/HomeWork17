@@ -61,7 +61,7 @@ public class Main {
         Driver busDriver = new BusDriver("Simonov Ivan Fedorovich", 1);
         TruckDriver truckDvier = new TruckDriver("Sidorov Petor Petrovich", 7);
 
-        car1.changeDriver(carDriver);
+        car1.setDriver(carDriver);
         car1.printMessage();
 
         Transport bus5 = new Bus("JAC", "HK6118G", 4.0, (BusDriver) busDriver);
@@ -69,6 +69,7 @@ public class Main {
 
         Transport truck5 = new Truck("MAN", "TGS", 5,truckDvier);
         truck5.printMessage();
+
 
     }
 }

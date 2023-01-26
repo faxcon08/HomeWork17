@@ -1,6 +1,15 @@
 package lesson_17;
 
 abstract public class Transport<T extends Driver> {
+    private DriverLicence licence = DriverLicence.NO_LICENCE;
+
+    public DriverLicence getLicence() {
+        return licence;
+    }
+
+    protected void setLicence(DriverLicence licence) {
+        this.licence = licence;
+    }
 
     /////// fields ///////
     private final String brand;
@@ -56,9 +65,10 @@ abstract public class Transport<T extends Driver> {
         return engineVolume;
     }
 
-    abstract public void changeDriver(T driver);
+    abstract public void setDriver(T driver);
 
     abstract public void printMessage();
 
+    abstract public T getDriver();
 
 } // Transport

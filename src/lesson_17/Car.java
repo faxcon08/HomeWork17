@@ -1,20 +1,28 @@
 package lesson_17;
 
-public class Car <T extends CarDriver> extends Transport implements Competing{
-    T driver;
+public class Car  extends Transport <CarDriver> implements Competing{
+    CarDriver driver;
     public Car(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
+        this.setLicence(DriverLicence.CAR_LICENCE);
     }
-    public Car(String brand, String model, double engineVolume, T driver) {
+    public Car(String brand, String model, double engineVolume, CarDriver driver) {
         super(brand, model, engineVolume);
         this.driver=driver;
+        this.setLicence(DriverLicence.CAR_LICENCE);
+
+    }
+    @Override
+    public CarDriver getDriver() {
+        if(driver==null) {
+            System.out.println("У машины " + this.getBrand() + " " + this.getModel() + " еще нет водителя");
+            return new CarDriver("no car driver", 0);
+        }
+        return driver;
     }
 
     @Override
-    public void changeDriver(Driver driver) {
-        if(driver.getLicence()==DriverLicence.CAR_LICENCE)
-            this.driver= (T) driver;
-    }
+    public void setDriver(CarDriver driver) {this.driver =  driver;}
     @Override
     public void printMessage() {
         if (this.driver==null) {

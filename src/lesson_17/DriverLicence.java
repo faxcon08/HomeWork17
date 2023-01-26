@@ -10,10 +10,4 @@ public enum DriverLicence {
     private DriverLicence(String typeLicence) {
         this.typeLicence=typeLicence;
     }
-
-  /*  @Override
-    public String toString() {
-        return "Licence "+typeLicence;
-    }*/
-
 }

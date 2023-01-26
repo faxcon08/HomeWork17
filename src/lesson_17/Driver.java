@@ -1,8 +1,9 @@
 package lesson_17;
 
-import java.util.Stack;
 
-public class Driver {
+
+abstract public class Driver  {
+
     protected static class Default_Values{
         static String default_Name = "default_name";
         static DriverLicence default_Driver_Licence = DriverLicence.CAR_LICENCE;
@@ -67,7 +68,8 @@ public class Driver {
     //////////////// methods /////////////////
 
     public void startMoving() {
-        System.out.println("Driver: " + this.driverFullName + " start moving");
+            System.out.println("Driver: " + this.driverFullName + " start moving");
+
     }
 
     public void stopMoving() {
